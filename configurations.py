@@ -54,8 +54,8 @@ input_pos = (win_size[0]/2 - 150, win_size[1]/4)
 cur_res_pos = (win_size[0]/2 - 100, win_size[1]/4)
 table_pos = (450, win_size[1]/3)
 
-start_lives = 45
-start_time = 5
+start_lives = 5
+start_time = 45
 
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
