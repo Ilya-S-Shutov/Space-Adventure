@@ -6,7 +6,13 @@ import os
 
 
 class Menu:
+    """
+    Стартовое меню.
+    """
     def __init__(self, main_surf):
+        """
+        Оформление меню.
+        """
         self.main_surf = main_surf
         self.surface = pg.surface.Surface(conf.win_size)
         # self.rect = self.surface.get_rect()
@@ -35,9 +41,16 @@ class Menu:
         self.instr = pg.transform.scale(pg.image.load(instr_path), conf.instr_size)
 
     def get_name(self):
+        """
+        Извлечение текста из поля для ввода.
+        :return: str
+        """
         return self.text_input.text
 
     def draw(self):
+        """
+        Отрисовка меню.
+        """
         self.main_surf.blit(self.surface, (0, 0))
         # pg.draw.rect(self.surface, conf.MENU, self.rect)
         self.surface.fill(conf.MENU)

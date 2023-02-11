@@ -5,6 +5,9 @@ from sprites.base import TextObj
 
 
 class Results:
+    """
+    Оформление экрана результатов.
+    """
     def __init__(self, main_surf):
         self.main_surf = main_surf
         self.surface = pg.surface.Surface(conf.win_size)
@@ -29,9 +32,11 @@ class Results:
         self.cur_res.set_text(f'{name}, ваш результат: {cur_res}!')
         self.line_1 = [self.font.render('Name', True, conf.BLACK)]
         self.line_2 = [self.font.render('Score', True, conf.BLACK)]
-        for row in res:
+        for i, row in enumerate(res):
             self.line_1.append(self.font.render(row[0], True, conf.BLACK))
             self.line_2.append(self.font.render(str(row[1]), True, conf.BLACK))
+            if i >= 5:
+                break
 
     def draw(self):
         self.main_surf.blit(self.surface, (0, 0))
