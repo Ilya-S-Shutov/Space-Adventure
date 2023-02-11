@@ -1,5 +1,4 @@
 import pygame as pg
-import configurations as conf
 from .base import ObjSprite
 
 

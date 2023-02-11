@@ -1,13 +1,12 @@
 import pygame as pg
-from game import Game
+
+from screens import Game, Menu, Results
 from sprites import Player, Bullet, Enemy
 from sprites.base import TextObj
-from menu import Menu
-from results import Results
+
 from data_base import DataBase
 import configurations as conf
 from random import randint
-import os
 
 
 class SpaceAdventure(Game):
