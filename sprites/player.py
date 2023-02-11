@@ -5,6 +5,9 @@ from .base import ObjSprite
 class Player(ObjSprite):
 
     def update(self):
+        """
+        Реализация перемещения персонажа.
+        """
         pressed = pg.key.get_pressed()
 
         if pressed[pg.K_UP] and self.rect.top > 0:
@@ -27,4 +30,8 @@ class Player(ObjSprite):
             if self.rect.right < 0:
                 self.rect.left = self.surf_size[0]
 
-
+    def move_to(self, coord):
+        """
+        Перемещение персонажа в указанную точку.
+        """
+        self.rect.center = coord

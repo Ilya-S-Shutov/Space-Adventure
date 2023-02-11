@@ -201,14 +201,19 @@ class SpaceAdventure(Game):
             Функция переключает состояние на 'game', что позволяет начать основную игру.
             Обнуляет ключевые переменные игровой сессии, сохраняет введённое имя игрока. Возобновляет проигрывание
             фоновой музыки и подключает звуковой эффект к нажатию кнопки.
+            Стирает всех оставшихся с предыдущей сессии противников.
+            Перемещает игрока в стартовую точку.
             """
             self.sounds['button'].play()
             self.music_swich()
             self.state = 'game'
             self.start()
             self.name = self.menu.get_name()
+            for enemy in self.enemies:
+                enemy.kill()
+            self.player.move_to((conf.win_size[0] / 2, conf.win_size[1] * 0.8))
 
-        def quit():
+        def game_exit():
             """
             Функция позволяет выйти из игры, зафиксировав окончательные изменения в БД.
             """
@@ -218,7 +223,7 @@ class SpaceAdventure(Game):
             pg.event.post(quit_event)
 
         self.menu.play_button.on_click = play
-        self.menu.quit_button.on_click = quit
+        self.menu.quit_button.on_click = game_exit
 
         self.mouse_handlers.extend([self.menu.text_input.mouse_event, self.menu.play_button.mouse_event, self.menu.quit_button.mouse_event])
         self.keydown_handlers.append(self.menu.text_input.key_down)
