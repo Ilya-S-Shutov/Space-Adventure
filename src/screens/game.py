@@ -9,6 +9,7 @@ class Game:
     """
     def __init__(self, size=(700, 500), caption='MyGame',
                  fps=60, bg_image=None, color=(0, 0, 0), music=None):
+
         pg.init()
         pg.font.init()
         pg.mixer.init()
