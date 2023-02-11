@@ -1,6 +1,7 @@
 import pygame as pg
 import configurations as conf
 
+
 class TextInput:
     def __init__(self, pos, size, surface):
         self.surface = surface

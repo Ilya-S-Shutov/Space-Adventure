@@ -1,5 +1,5 @@
 import pygame as pg
-from sprites.sprites import ObjSprite
+from .base import ObjSprite
 
 
 class Player(ObjSprite):

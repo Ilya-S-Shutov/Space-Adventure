@@ -1,9 +1,7 @@
 import pygame as pg
 from game import Game
-from sprites.player import Player
-from sprites.enemy import Enemy
-from sprites.bullet import Bullet
-from sprites.text_sprites import TextObj
+from sprites import Player, Bullet, Enemy
+from sprites.base import TextObj
 from menu import Menu
 from results import Results
 from data_base import DataBase

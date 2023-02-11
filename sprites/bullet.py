@@ -1,6 +1,6 @@
 import pygame as pg
 import configurations as conf
-from sprites.sprites import ObjSprite
+from .base import ObjSprite
 
 
 class Bullet(ObjSprite):

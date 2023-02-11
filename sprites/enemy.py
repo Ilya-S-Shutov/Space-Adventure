@@ -1,6 +1,6 @@
 import pygame as pg
 from random import randint
-from sprites.sprites import ObjSprite
+from .base import ObjSprite
 
 
 class Enemy(ObjSprite):
