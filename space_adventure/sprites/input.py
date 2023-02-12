@@ -1,5 +1,5 @@
 import pygame as pg
-from src import configurations as conf
+import configurations as conf
 
 
 class TextInput:

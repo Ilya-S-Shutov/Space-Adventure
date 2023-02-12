@@ -1,5 +1,5 @@
 import pygame as pg
-from .base import ObjSprite
+from sprites.base import ObjSprite
 
 
 class Bullet(ObjSprite):
