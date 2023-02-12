@@ -1,7 +1,7 @@
 import pygame as pg
-from src import configurations as conf
-from src.sprites import Button
-from src.sprites.base import TextObj
+import configurations as conf
+from sprites import Button
+from sprites.base import TextObj
 
 
 class Results:

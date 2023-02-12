@@ -1,7 +1,7 @@
 import pygame as pg
-from src import configurations as conf
-from src.sprites import Button
-from src.sprites import TextInput
+import configurations as conf
+from sprites import Button
+from sprites import TextInput
 import os
 
 

@@ -9,8 +9,6 @@ from data_base import DataBase
 import configurations as conf
 from random import randint
 
-os.chdir(os.path.split(os.path.abspath(__file__))[0])
-
 
 class SpaceAdventure(Game):
     """
